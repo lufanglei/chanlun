@@ -1,0 +1,693 @@
+```css
+/* =========================================================
+   Obsidian — Markdown Preview Enhanced / Docsify Style
+   Based on the CSS supplied by the user
+   ========================================================= */
+
+
+/* =========================================================
+   1. 字体
+   ========================================================= */
+
+/*
+ * MPE 原始字体：
+ * Source Sans Pro
+ * Roboto Mono
+ *
+ * 如果系统没有安装字体，Obsidian 会自动使用后面的字体。
+ */
+
+.markdown-preview-view,
+.markdown-source-view.mod-cm6 .cm-content {
+    font-family:
+        "Source Sans Pro",
+        "Helvetica Neue",
+        Arial,
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* =========================================================
+   2. 阅读区域
+   ========================================================= */
+
+/*
+ * MPE 原始内容区域比较宽松。
+ * Obsidian 默认阅读区域可能比较宽，因此这里限制最大宽度。
+ */
+
+.markdown-preview-view {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+
+    color: #66727e;
+    font-size: 16px;
+    letter-spacing: 0;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   3. 正文
+   ========================================================= */
+
+.markdown-preview-view p {
+    margin-top: 1.2em;
+    margin-bottom: 1.2em;
+
+    line-height: 1.6;
+    word-spacing: 0.05rem;
+}
+
+
+/* =========================================================
+   4. 标题
+   ========================================================= */
+
+.markdown-preview-view h1,
+.markdown-preview-view h2,
+.markdown-preview-view h3,
+.markdown-preview-view h4,
+.markdown-preview-view strong {
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+
+/* H1 */
+
+.markdown-preview-view h1 {
+    font-size: 2rem;
+    line-height: 1.25;
+
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+
+/* H2 */
+
+.markdown-preview-view h2 {
+    font-size: 1.75rem;
+    line-height: 1.3;
+
+    margin-top: 45px;
+    margin-bottom: 0.8rem;
+}
+
+
+/* H3 */
+
+.markdown-preview-view h3 {
+    font-size: 1.5rem;
+    line-height: 1.35;
+
+    margin-top: 40px;
+    margin-bottom: 0.6rem;
+}
+
+
+/* H4 */
+
+.markdown-preview-view h4 {
+    font-size: 1.25rem;
+    line-height: 1.4;
+
+    margin-top: 30px;
+    margin-bottom: 0.6rem;
+}
+
+
+/* H5 */
+
+.markdown-preview-view h5 {
+    font-size: 1rem;
+    line-height: 1.5;
+
+    margin-top: 25px;
+    margin-bottom: 0.5rem;
+}
+
+
+/* H6 */
+
+.markdown-preview-view h6 {
+    color: #777;
+    font-size: 1rem;
+    line-height: 1.5;
+
+    margin-top: 25px;
+    margin-bottom: 0.5rem;
+}
+
+
+/* =========================================================
+   5. 链接
+   ========================================================= */
+
+.markdown-preview-view a {
+    color: #42b983;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.markdown-preview-view a:hover {
+    color: #42b983;
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   6. 加粗
+   ========================================================= */
+
+.markdown-preview-view strong,
+.markdown-preview-view b {
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   7. 斜体
+   ========================================================= */
+
+.markdown-preview-view em,
+.markdown-preview-view i {
+    color: #7f8c8d;
+}
+
+
+/* =========================================================
+   8. 列表
+   ========================================================= */
+
+.markdown-preview-view ul,
+.markdown-preview-view ol {
+    padding-left: 1.5rem;
+
+    line-height: 1.6;
+    word-spacing: 0.05rem;
+}
+
+
+.markdown-preview-view li {
+    margin-top: 0.25em;
+    margin-bottom: 0.25em;
+}
+
+
+.markdown-preview-view li > p {
+    margin-top: 0.4em;
+    margin-bottom: 0.4em;
+}
+
+
+/* =========================================================
+   9. 引用 Blockquote
+   ========================================================= */
+
+.markdown-preview-view blockquote {
+    border-left: 4px solid #42b983;
+
+    color: #858585;
+    background-color: #f0f0f0;
+
+    margin: 2em 0;
+    padding: 1px 20px;
+
+    border-radius: 0 2px 2px 0;
+}
+
+
+.markdown-preview-view blockquote p {
+    font-weight: 600;
+    margin-left: 0;
+}
+
+
+/* 嵌套引用 */
+
+.markdown-preview-view blockquote blockquote {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+
+/* =========================================================
+   10. 分割线
+   ========================================================= */
+
+.markdown-preview-view hr {
+    border: none;
+    border-bottom: 1px solid #eee;
+
+    margin: 2em 0;
+}
+
+
+/* =========================================================
+   11. 表格
+   ========================================================= */
+
+.markdown-preview-view table {
+    border-collapse: collapse;
+    border-spacing: 0;
+
+    width: 100%;
+
+    margin-bottom: 1rem;
+
+    overflow: auto;
+}
+
+
+.markdown-preview-view th {
+    font-weight: 700;
+
+    background-color: #f8f8f8;
+}
+
+
+.markdown-preview-view td,
+.markdown-preview-view th {
+    border: 1px solid #ddd;
+
+    padding: 6px 13px;
+
+    text-align: left;
+}
+
+
+.markdown-preview-view tr {
+    border-top: 1px solid #ccc;
+}
+
+
+.markdown-preview-view tr:nth-child(2n) {
+    background-color: #f8f8f8;
+}
+
+
+/* =========================================================
+   12. 行内代码
+   ========================================================= */
+
+.markdown-preview-view code {
+    font-family:
+        "Roboto Mono",
+        "SFMono-Regular",
+        Consolas,
+        "Liberation Mono",
+        Menlo,
+        monospace;
+
+    font-size: 0.9em;
+}
+
+
+/* =========================================================
+   13. 行内代码块
+   ========================================================= */
+
+.markdown-preview-view :not(pre) > code {
+    background-color: #f0f0f0;
+
+    border-radius: 3px;
+
+    padding: 2px 5px;
+
+    color: #34495e;
+}
+
+
+/* =========================================================
+   14. 代码块
+   ========================================================= */
+
+.markdown-preview-view pre {
+    font-family:
+        "Roboto Mono",
+        "SFMono-Regular",
+        Consolas,
+        "Liberation Mono",
+        Menlo,
+        monospace;
+
+    font-size: 0.9em;
+
+    line-height: 1.6;
+
+    border-radius: 4px;
+
+    padding: 16px;
+
+    overflow-x: auto;
+}
+
+
+/* =========================================================
+   15. 键盘按键 kbd
+   ========================================================= */
+
+.markdown-preview-view kbd {
+    color: #34495e;
+
+    border: 1px solid #ccc;
+    border-radius: 3px;
+
+    display: inline-block;
+
+    font-size: 12px;
+
+    line-height: 12px;
+
+    margin-bottom: 3px;
+
+    padding: 3px 5px;
+
+    vertical-align: middle;
+
+    background-color: #fafafa;
+
+    box-shadow:
+        0 1px 0 rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================================================
+   16. 图片
+   ========================================================= */
+
+.markdown-preview-view img {
+    max-width: 100%;
+    height: auto;
+
+    border-radius: 2px;
+}
+
+
+/* =========================================================
+   17. 任务列表
+   ========================================================= */
+
+.markdown-preview-view .task-list-item {
+    list-style-type: none;
+}
+
+
+.markdown-preview-view input[type="checkbox"] {
+    margin-right: 0.5em;
+    vertical-align: middle;
+}
+
+
+/* =========================================================
+   18. 提示框 Tip
+   ========================================================= */
+
+/*
+ * 对应 MPE：
+ *
+ * <p class="tip">
+ *
+ * Obsidian 原生没有完全相同的 tip 结构，
+ * 所以这里兼容常见的 callout。
+ */
+
+
+/* MPE 风格 */
+
+.markdown-preview-view p.tip {
+    border-left: 4px solid #f66;
+
+    background-color: #f8f8f8;
+
+    border-radius: 0 2px 2px 0;
+
+    margin: 2em 0;
+
+    padding: 12px 24px 12px 30px;
+
+    position: relative;
+}
+
+
+/* =========================================================
+   19. Obsidian Callout → MPE Tip 风格
+   ========================================================= */
+
+.markdown-preview-view .callout {
+    border-left: 4px solid #42b983;
+
+    border-radius: 0 2px 2px 0;
+
+    background-color: #f8f8f8;
+
+    box-shadow: none;
+}
+
+
+.markdown-preview-view .callout-title {
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   20. Warning Callout
+   ========================================================= */
+
+.markdown-preview-view .callout[data-callout="warning"],
+.markdown-preview-view .callout[data-callout="warn"] {
+    border-left-color: #f66;
+}
+
+
+/* =========================================================
+   21. Note / Info
+   ========================================================= */
+
+.markdown-preview-view .callout[data-callout="note"],
+.markdown-preview-view .callout[data-callout="info"] {
+    border-left-color: #42b983;
+}
+
+
+/* =========================================================
+   22. 提醒块背景
+   ========================================================= */
+
+.markdown-preview-view .callout-content {
+    color: #34495e;
+}
+
+
+/* =========================================================
+   23. 脚注
+   ========================================================= */
+
+.markdown-preview-view .footnote-ref {
+    color: #42b983;
+}
+
+
+/* =========================================================
+   24. 高亮
+   ========================================================= */
+
+.markdown-preview-view mark {
+    background-color: #fff3a3;
+
+    color: #34495e;
+
+    padding: 0 2px;
+}
+
+
+/* =========================================================
+   25. 删除线
+   ========================================================= */
+
+.markdown-preview-view del {
+    color: #7f8c8d;
+}
+
+
+/* =========================================================
+   26. 首个元素
+   ========================================================= */
+
+.markdown-preview-view > :first-child {
+    margin-top: 0 !important;
+}
+
+
+/* =========================================================
+   27. 段落间距
+   ========================================================= */
+
+.markdown-preview-view > p:first-child {
+    margin-top: 0;
+}
+
+
+/* =========================================================
+   28. 嵌入内容
+   ========================================================= */
+
+.markdown-preview-view .internal-embed {
+    max-width: 100%;
+}
+
+
+/* =========================================================
+   29. Mermaid
+   ========================================================= */
+
+.markdown-preview-view .mermaid {
+    margin: 1em 0;
+}
+
+
+/* =========================================================
+   30. 数学公式
+   ========================================================= */
+
+.markdown-preview-view .math-block {
+    margin: 1.5em 0;
+    overflow-x: auto;
+}
+
+
+/* =========================================================
+   31. 表格移动端横向滚动
+   ========================================================= */
+
+.markdown-preview-view .table-wrapper {
+    overflow-x: auto;
+}
+
+
+/* =========================================================
+   32. 阅读模式滚动条
+   ========================================================= */
+
+.markdown-preview-view::-webkit-scrollbar {
+    width: 6px;
+}
+
+
+.markdown-preview-view::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+}
+
+
+.markdown-preview-view::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+
+/* =========================================================
+   33. 移动端
+   ========================================================= */
+
+@media screen and (max-width: 768px) {
+
+    .markdown-preview-view {
+        max-width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .markdown-preview-view h1 {
+        font-size: 1.8rem;
+    }
+
+    .markdown-preview-view h2 {
+        font-size: 1.55rem;
+        margin-top: 35px;
+    }
+
+    .markdown-preview-view h3 {
+        font-size: 1.35rem;
+        margin-top: 30px;
+    }
+
+    .markdown-preview-view table {
+        display: block;
+        overflow-x: auto;
+    }
+}
+
+
+/* =========================================================
+   34. 深色模式
+   ========================================================= */
+
+/*
+ * MPE 原 CSS 是浅色主题。
+ *
+ * 这里不强行把 Obsidian 深色模式变成白色，
+ * 而是对颜色进行适配。
+ */
+
+.theme-dark .markdown-preview-view {
+    color: #c9d1d9;
+}
+
+
+.theme-dark .markdown-preview-view h1,
+.theme-dark .markdown-preview-view h2,
+.theme-dark .markdown-preview-view h3,
+.theme-dark .markdown-preview-view h4,
+.theme-dark .markdown-preview-view h5,
+.theme-dark .markdown-preview-view h6,
+.theme-dark .markdown-preview-view strong,
+.theme-dark .markdown-preview-view b {
+    color: #e6edf3;
+}
+
+
+.theme-dark .markdown-preview-view em,
+.theme-dark .markdown-preview-view i {
+    color: #9da7b3;
+}
+
+
+.theme-dark .markdown-preview-view blockquote {
+    color: #9da7b3;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+
+.theme-dark .markdown-preview-view :not(pre) > code {
+    background-color: rgba(255, 255, 255, 0.08);
+    color: #c9d1d9;
+}
+
+
+.theme-dark .markdown-preview-view th {
+    background-color: rgba(255, 255, 255, 0.06);
+}
+
+
+.theme-dark .markdown-preview-view tr:nth-child(2n) {
+    background-color: rgba(255, 255, 255, 0.03);
+}
+
+
+.theme-dark .markdown-preview-view td,
+.theme-dark .markdown-preview-view th {
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+
+.theme-dark .markdown-preview-view hr {
+    border-bottom-color: rgba(255, 255, 255, 0.15);
+}
+```
